@@ -7,7 +7,7 @@ Users can upload an image, preview it instantly, and close the preview if needed
 
 ## 🔗 Live Demo
 
-👉 [View Live Project Here]([https://your-live-link-here](https://msdhinesh45.github.io/Image-uploader/))
+👉 [View Live Project Here](https://msdhinesh45.github.io/Image-uploader)
 
 ---
 
