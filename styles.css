@@ -1,75 +1,113 @@
-body{
+/* Base Styling */
+body {
     background-color: #ffe0b5;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 20px;
 }
 
-.wrapper{
-    max-width: 700px;
-    height: 500px;
-    width: 300%;
+.wrapper {
+    max-width: 90%;
+    width: 100%;
+    max-height: 90vh;
     border: 5px dotted grey;
     text-align: center;
-    position:relative;
+    position: relative;
     overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.text{
-    margin-bottom: 30px;
+.text {
+    margin-bottom: 20px;
     color: blue;
-
+    font-size: 1.5rem;
 }
 
-input{
+input {
     display: none;
 }
 
-.upload{
+.upload {
     background: greenyellow;
     color: red;
     font-weight: 900;
-    padding: 15px 25px;
+    padding: 12px 20px;
     transition: 0.5s ease;
     cursor: pointer;
     border-radius: 30px;
+    display: inline-block;
 }
 
-.upload:hover{
+.upload:hover {
     box-shadow: 2px 3px 10px grey;
 }
 
-.img img{
-    width: 99%;
-    height: 99%;
-    object-fit: cover;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    display: none;
+.img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-.icon p.close{
+.img img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: none;
+    border-radius: 10px;
+}
+
+.img img.active {
+    display: block;
+}
+
+.icon p.close {
     font-size: 20px;
     color: black;
     position: absolute;
     right: 20px;
-    top: 1px;
+    top: 10px;
     z-index: 2;
-    display:none ;
+    display: none;
     cursor: pointer;
 }
 
-.wrapper .icon p.close:hover{
+.wrapper .icon p.close:hover {
     color: crimson;
 }
 
-.img img.active{
+.wrapper .icon p.close.exit {
     display: block;
 }
 
-.wrapper .icon p.close.exit{
-    display: block;
+/* Responsive Styling */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 15px;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .upload {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .img img {
+        max-height: 200px;
+    }
+
+    .icon p.close {
+        top: 5px;
+        right: 10px;
+    }
 }
